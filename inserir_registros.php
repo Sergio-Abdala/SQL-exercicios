@@ -1,0 +1,8 @@
+<?php  
+	require 'conex.php';
+	mysqli_query($conex, "INSERT  INTO cliente VALUES('', '111.111.111-11', 'Primeiro da Silva Souza Santos', '1970-10-24'), ('', '222.222.222-22', 'Segundo  Souza Santos', '1970-11-14'), ('', '333.333.333-33', 'Terceira da Silva Souza', '1970-02-12'), ('', '444.444.444-44', 'Quarto da Silva eh só', '1970-07-07'), ('', '555.555.555-55', 'Quinta Souza Santos', '1983-12-30');")or die(mysqli_error($conex));
+	mysqli_query($conex, "INSERT INTO modelo VALUES('', 'fusca meia boca...'), ('', 'ford verona'), ('', 'fiat 147 bem batido...'), ('', 'gipe da segunda gerra mundial veterano de museu'), ('', 'van escolar')")or die(mysqli_error($conex));
+	mysqli_query($conex, "INSERT INTO patio VALUES('', 'rua qualquer n: 123', '23'), ('', 'rua magalhães n: 1000', '11'), ('', 'morro da cruz n: 17169', '69'), ('', 'rua sepé tiarajú n: 341', '54'), ('', 'nem imagino n: 000', '27'), ('', 'bem longe s/ num', '87')")or die(mysqli_error($conex));
+	mysqli_query($conex, "INSERT  INTO veiculo VALUES('', '1', '1', 'ama 11111', 'amarelo', '2000'), ('', '2', '2', 'ver 22222', 'verde', '1988'), ('', '3', '3', 'azu 33333', 'azulado', '1990'), ('', '4', '4', 'prt 44444', 'preta', '2001')")or die(mysqli_error($conex));
+	mysqli_query($conex, "INSERT INTO `estacionamento` (`idEstacionamento`, `idVeiculo`, `idPatio`, `dataEntrada`, `dataSaida`, `horaEntrada`, `horaSaida`) VALUES (NULL, '4', '2', '2017-03-03', '2017-03-03', '08:30:00', '10:15:00');");
+?>
